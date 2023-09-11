@@ -17,3 +17,21 @@
 	'b': ['bear','banana']
 }
  */
+
+const s = 'a quick brown fox jumps over a lazy dog';
+
+let finalString = '';
+let prevValue = ' ';
+
+for (let i in s) {
+	if (prevValue === ' ') {
+		finalString += s[i].toUpperCase();
+	} else {
+		finalString += s[i].toLowerCase();
+	}
+	//
+
+	prevValue = s[i];
+}
+
+console.log(finalString);
